@@ -64,8 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   final List<String> _advertisementImages = [
-    'assets/DURUM/elektronik.png',
-    'assets/DURUM/kiyafet.png',
+    'assets/durum1.png',
+    'assets/durum2.png',
     'assets/DURUM/yemek.png',
     'assets/DURUM/yemektarafi.png',
   ];
