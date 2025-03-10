@@ -19,7 +19,7 @@ class Onboarding1 extends StatelessWidget {
             ),
             Container(
               height: AppSizes.myHeight(context) / 3,
-              child: Image.asset("assets/1.png"),
+              child: Image.asset("assets/s1.png"),
             ),
             Text(
               "Görünmez İzleri Takip Et!",
