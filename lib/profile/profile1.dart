@@ -162,7 +162,8 @@ class _Profile1State extends State<Profile1> {
     );
   }
 
-  ListTile list(BuildContext context, String text, IconData icon, void fun1) {
+  ListTile list(
+      BuildContext context, String text, IconData icon, VoidCallback fun1) {
     return ListTile(
       leading: Icon(
         icon,
@@ -174,15 +175,12 @@ class _Profile1State extends State<Profile1> {
             color: Colors.white, fontSize: AppSizes.myHeight(context) / 50),
       ),
       trailing: IconButton(
-        icon: Icon(
-          Icons.arrow_forward_ios,
+          icon: Icon(
+            Icons.arrow_forward_ios,
+            color: Appcolors.greenBackground,
+          ),
           color: Appcolors.greenBackground,
-        ),
-        color: Appcolors.greenBackground,
-        onPressed: () {
-          fun1;
-        },
-      ),
+          onPressed: fun1),
     );
   }
 
