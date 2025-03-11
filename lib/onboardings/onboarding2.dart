@@ -36,7 +36,9 @@ class Onboarding2 extends StatelessWidget {
               """🛒 Her yıl milyarlarca ton gıda, kıyafet ve diğer ürünler çöpe gidiyor. Peki ya bu ürünler tekrar kullanılabilseydi?
 İsraf, sadece bütçesine değil, doğaya da zarar verir. Oysa onun fazlalığı, bir başkasının ihtiyacı olabilir. Doğru değerlendirdiğinde, kaybetmek değil fırsat olur!
 🔄 İhtiyaç fazlası ürünleri tüketme yerine fırsata çevir! Fırsat Avcısı'nda her şeyin bir ikinci şansı var.""",
-              style: AppTextStyles.subText,
+              style: TextStyle(
+                  fontSize: AppSizes.myHeight(context) / 53,
+                  color: Colors.white),
             ),
           ],
         ),

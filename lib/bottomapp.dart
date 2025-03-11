@@ -17,6 +17,13 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Appcolors.greenBackground,
+        child: Icon(Icons.qr_code),
+        onPressed: () {},
+        shape: CircleBorder(),
+      ),
       body: IndexedStack(
         index: _selectedIndex,
         children: [
@@ -24,8 +31,6 @@ class _HomepageState extends State<Homepage> {
           HomeScreen(),
           Container(color: Colors.blue), // Gifts page
           Container(color: Colors.green), // Chat page
-          Container(color: Colors.red), // Gifts page
-          Container(color: Colors.black), // Gifts page
 
           ProfileScreen(), // Profile page
         ],
@@ -42,7 +47,7 @@ class _HomepageState extends State<Homepage> {
             EdgeInsets.symmetric(horizontal: AppSizes.myHeight(context) / 100),
         height: AppSizes.myHeight(context) / 15,
         color: Color(0xFF1B2B3A),
-        notchMargin: 5,
+        notchMargin: 0,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,7 +76,7 @@ class _HomepageState extends State<Homepage> {
             ),
             IconButton(
               icon: Icon(
-                Icons.favorite,
+                Icons.shopping_cart,
                 color: _selectedIndex == 2 ? Colors.white : Colors.grey,
               ),
               onPressed: () {
@@ -82,34 +87,12 @@ class _HomepageState extends State<Homepage> {
             ),
             IconButton(
               icon: Icon(
-                Icons.qr_code,
+                Icons.person,
                 color: _selectedIndex == 3 ? Colors.white : Colors.grey,
               ),
               onPressed: () {
                 setState(() {
                   _selectedIndex = 3;
-                });
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: _selectedIndex == 4 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 4;
-                });
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.person,
-                color: _selectedIndex == 5 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 5;
                 });
               },
             ),

@@ -37,7 +37,9 @@ class Onboarding3 extends StatelessWidget {
               """💰 Daha uygun maliyetlerin karşılanması mümkün! İsraf edilen ürünler, kartvizitler ve ekonomik alışverişin yeni adresi Fırsat Avcısı ile hem cebini hem doğayı koru.
 Burada hem kazanır hem de kazanırsın. Daha az harcayarak, daha fazlasını paylaşarak ve ihtiyacın olanı bularak sürdürülebilir bir alışveriş deneyimine katılın!
 🚀 Fırsatlar seni bekliyor! Hazır mısın?""",
-              style: AppTextStyles.subText,
+              style: TextStyle(
+                  fontSize: AppSizes.myHeight(context) / 53,
+                  color: Colors.white),
             ),
             SizedBox(
               height: AppSizes.myHeight(context) / 15,

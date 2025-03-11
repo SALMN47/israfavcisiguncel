@@ -115,8 +115,8 @@ class _PageIndicatorExampleState extends State<PageIndicatorExample> {
             children: [Onboarding1(), Onboarding2(), Onboarding3()],
           ),
           Positioned(
-            left: AppSizes.myWidth(context) / 25, // Soldan 50 piksel
-            bottom: AppSizes.myHeight(context) / 8, // Alttan 100 piksel
+            left: AppSizes.myWidth(context) / 25,
+            bottom: AppSizes.myHeight(context) / 8,
             child: SmoothPageIndicator(
               controller: _pageController,
               count: 3,

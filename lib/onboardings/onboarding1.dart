@@ -32,7 +32,9 @@ class Onboarding1 extends StatelessWidget {
               """🌍Her adımımız, doğaya bir iz bırakır. Ürününü aldığımız, tükettiğimiz kaynağı, Hizmetlerimiz... Tüm bunları karbon ayaklarımızı oluşturur.
 Ama unutma, izlerimizi silebiliriz! Daha fazla yerde tüketimi, atıklarını azaltma ve israfı önleme ile gezegenimize nefes alabiliriz. Fırsat Avcısı olarak biz, sürdürülebilir bir dünya için buradayız!
 💚 Şimdi sen de karbon ayak izini küçültmek için ilk adım at!""",
-              style: AppTextStyles.subText,
+              style: TextStyle(
+                  fontSize: AppSizes.myHeight(context) / 53,
+                  color: Colors.white),
             ),
             SizedBox(
               height: AppSizes.myHeight(context) / 15,

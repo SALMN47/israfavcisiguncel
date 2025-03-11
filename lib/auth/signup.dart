@@ -13,6 +13,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  String? _selectedGender;
   bool private = false;
   @override
   Widget build(BuildContext context) {
@@ -50,7 +51,51 @@ class _SignUpState extends State<SignUp> {
                       text111(),
                       field1(),
                       text112(),
-                      field1(),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(
+                            AppSizes.myHeight(context) / 50,
+                            AppSizes.myHeight(context) / 80,
+                            AppSizes.myHeight(context) / 50,
+                            AppSizes.myHeight(context) / 40),
+                        child: DropdownButtonFormField<String>(
+                          value: _selectedGender,
+                          icon: const Icon(Icons.arrow_drop_down,
+                              color: Colors.white),
+                          decoration: InputDecoration(
+                              fillColor: const Color(0xFF1B2B3A),
+                              filled: true,
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                  borderSide: const BorderSide(
+                                      color: Appcolors.greenBackground))),
+                          dropdownColor: const Color(0xFF1B2B3A),
+                          items: const [
+                            DropdownMenuItem(
+                              value: "Male",
+                              child: Text("Male",
+                                  style: TextStyle(color: Colors.white)),
+                            ),
+                            DropdownMenuItem(
+                              value: "Female",
+                              child: Text("Female",
+                                  style: TextStyle(color: Colors.white)),
+                            ),
+                            DropdownMenuItem(
+                              value: "Other",
+                              child: Text("Other",
+                                  style: TextStyle(color: Colors.white)),
+                            ),
+                          ],
+                          onChanged: (String? newValue) {
+                            // Seçilen değeri state'e aktarıyoruz.
+                            setState(() {
+                              _selectedGender = newValue;
+                            });
+                          },
+                        ),
+                      ),
                       SizedBox(
                         height: AppSizes.myHeight(context) / 40,
                       ),
