@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:israfavcisi/constants/appconstants.dart';
 
 class Category {
   final String name;
@@ -64,10 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   final List<String> _advertisementImages = [
-    'assets/durum1.png',
-    'assets/durum2.png',
-    'assets/DURUM/yemek.png',
-    'assets/DURUM/yemektarafi.png',
+    'assets/z1.png',
+    'assets/z2.png',
+    'assets/z3.png',
+    'assets/z4.png',
   ];
   final List<Map<String, String>> fastCategories = [
     {'image': 'assets/restoran.jpg', 'name': 'Restoran'},
@@ -731,11 +732,12 @@ class _HomeScreenState extends State<HomeScreen> {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Wrap(
-          spacing: 16.0,
+          spacing: AppSizes.myWidth(context) / 20,
           alignment: WrapAlignment.center,
           children: fastCategories.map((category) {
             return Container(
-              width: 120, // you can also adjust this value responsively
+              width: AppSizes.myWidth(context) /
+                  4, // you can also adjust this value responsively
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -743,16 +745,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
                       category['image']!,
-                      width: 65,
-                      height: 65,
+                      width: AppSizes.myWidth(context) / 6,
+                      height: AppSizes.myHeight(context) / 13,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: AppSizes.myHeight(context) / 100),
                   Text(
                     category['name']!,
-                    style: const TextStyle(
-                      fontSize: 15,
+                    style: TextStyle(
+                      fontSize: AppSizes.myHeight(context) / 70,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
@@ -792,7 +794,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: AppSizes.myHeight(context) / 50),
             SizedBox(
               height: cardHeight.toDouble(),
               child: ListView.builder(
@@ -811,8 +813,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       // );
                     },
                     child: Container(
-                      width: 200,
-                      margin: EdgeInsets.only(right: 16),
+                      width: AppSizes.myWidth(context) / 2,
+                      margin: EdgeInsets.only(
+                          right: AppSizes.myHeight(context) / 50),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.white,
@@ -853,7 +856,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(height: 4),
+                                SizedBox(
+                                    height: AppSizes.myHeight(context) / 100),
                                 Row(
                                   children: [
                                     Text(
@@ -951,7 +955,7 @@ class _HomeScreenState extends State<HomeScreen> {
             firstSlider(),
             flashindirim(context),
             secondSlider(),
-            SizedBox(height: 16),
+            SizedBox(height: AppSizes.myHeight(context) / 30),
             _buildProductSection('En Çok Satanlar', bestSellers),
             AspectRatio(
               aspectRatio: 16 / 6, // Adjust ratio as needed
@@ -1061,7 +1065,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Center and constrain the container to a maximum width.
           child: Container(
             width: maxContainerWidth,
-            height: 200,
+            height: AppSizes.myHeight(context) / 2.5,
             margin: EdgeInsets.symmetric(vertical: isDesktop ? 24.0 : 16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(isDesktop ? 12.0 : 8),
@@ -1107,7 +1111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: isDesktop ? 10.0 : 8),
                 SizedBox(
-                  height: 300,
+                  height: AppSizes.myHeight(context) / 3,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     padding:
@@ -1126,7 +1130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           // );
                         },
                         child: Container(
-                          width: 100,
+                          width: AppSizes.myWidth(context) / 2,
                           margin: EdgeInsets.only(right: isDesktop ? 16.0 : 16),
                           decoration: BoxDecoration(
                             borderRadius:
@@ -1201,7 +1205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
-                SizedBox(height: isDesktop ? 16.0 : 16),
+                //   SizedBox(height: isDesktop ? 16.0 : 16),
               ],
             ),
           ),
@@ -1255,7 +1259,7 @@ class _HomeScreenState extends State<HomeScreen> {
   CarouselSlider firstSlider() {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 300,
+        height: AppSizes.myHeight(context) / 2.5,
         autoPlay: true,
         enlargeCenterPage: true,
         viewportFraction: 0.9,

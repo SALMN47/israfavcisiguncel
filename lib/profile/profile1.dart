@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
+import 'package:israfavcisi/profile/degistir.dart';
 import 'package:israfavcisi/profile/duzenle.dart';
 
 class Profile1 extends StatefulWidget {
@@ -125,11 +126,14 @@ class _Profile1State extends State<Profile1> {
               )
             ],
           ),
-          list(context, 'Favorilerim', Icons.favorite_outline),
-          list(context, 'Görüşlerim', Icons.star_outline),
-          list(context, 'Tarih', Icons.date_range_outlined),
-          list(context, 'Dil', Icons.flag_outlined),
-          list(context, 'Şifreyi Değiştir', Icons.key_rounded),
+          list(context, 'Favorilerim', Icons.favorite_outline, () {}),
+          list(context, 'Görüşlerim', Icons.star_outline, () {}),
+          list(context, 'Tarih', Icons.date_range_outlined, () {}),
+          list(context, 'Dil', Icons.flag_outlined, () {}),
+          list(context, 'Şifreyi Değiştir', Icons.key_rounded, () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const degistirPage()));
+          }),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Divider(
@@ -158,7 +162,7 @@ class _Profile1State extends State<Profile1> {
     );
   }
 
-  ListTile list(BuildContext context, String text, IconData icon) {
+  ListTile list(BuildContext context, String text, IconData icon, void fun1) {
     return ListTile(
       leading: Icon(
         icon,
@@ -175,7 +179,9 @@ class _Profile1State extends State<Profile1> {
           color: Appcolors.greenBackground,
         ),
         color: Appcolors.greenBackground,
-        onPressed: () {},
+        onPressed: () {
+          fun1;
+        },
       ),
     );
   }
