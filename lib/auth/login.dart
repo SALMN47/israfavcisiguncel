@@ -155,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
-                child: Image.asset("assets/logo/f1.png"),
+                child: Image.asset("assets/logo/facebook1.png"),
               ),
               Text(
                 "Login with Facebook",
@@ -184,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
-                child: Image.asset("assets/logo/g1.png"),
+                child: Image.asset("assets/logo/google1.png"),
               ),
               Text(
                 "Login with Google",

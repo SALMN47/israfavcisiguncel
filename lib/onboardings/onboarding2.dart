@@ -18,7 +18,7 @@ class Onboarding2 extends StatelessWidget {
             ),
             Container(
               height: AppSizes.myHeight(context) / 3,
-              child: Image.asset("assets/images/o2.png"),
+              child: Image.asset("assets/s2.png"),
             ),
             Row(
               //  mainAxisAlignment: MainAxisAlignment.start,

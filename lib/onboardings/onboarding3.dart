@@ -19,7 +19,7 @@ class Onboarding3 extends StatelessWidget {
             ),
             Container(
               height: AppSizes.myHeight(context) / 3,
-              child: Image.asset("assets/images/o3.png"),
+              child: Image.asset("assets/s3.png"),
             ),
             Row(
               //  mainAxisAlignment: MainAxisAlignment.start,
