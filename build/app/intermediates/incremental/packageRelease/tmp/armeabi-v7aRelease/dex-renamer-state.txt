@@ -1,4 +1,0 @@
-#Sat Mar 08 17:19:25 TRT 2025
-base.0=/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

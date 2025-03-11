@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/auth/reset.dart';
 import 'package:israfavcisi/auth/signup.dart';
-import 'package:israfavcisi/backendservices/auth_services.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
 import 'package:israfavcisi/widgets/custombutton.dart';
 
@@ -14,8 +13,6 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool private = false;
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,51 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: AppSizes.myHeight(context) / 40,
                       ),
-                      CustomButton(
-                        text: "Login",
-                        onPressed: () async {
-                          String email = emailController.text.trim();
-                          String password = passwordController.text.trim();
-
-                          if (email.isEmpty || password.isEmpty) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                  content:
-                                      Text("Lütfen e-posta ve şifre girin.")),
-                            );
-                            return;
-                          }
-
-                          AuthService authService = AuthService();
-                          final result =
-                              await authService.loginUser(email, password);
-
-                          if (result["success"]) {
-                            // Giriş başarılıysa SnackBar göster
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content:
-                                    Text("Giriş başarılı! Hoş geldiniz 🎉"),
-                                backgroundColor: Colors.green,
-                                duration: Duration(seconds: 2),
-                              ),
-                            );
-
-                            // Kullanıcıyı yönlendir (Örneğin ana sayfaya "/home" yönlendirebilirsiniz)
-                            Future.delayed(Duration(seconds: 2), () {
-                              Navigator.pushReplacementNamed(context, "/home");
-                            });
-                          } else {
-                            // Giriş başarısızsa hata mesajı göster
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(result["message"]),
-                                backgroundColor: Colors.red,
-                              ),
-                            );
-                          }
-                        },
-                      ),
+                      CustomButton(text: "Login", onPressed: () {}),
                       SizedBox(
                         height: AppSizes.myHeight(context) / 40,
                       ),
@@ -250,7 +203,6 @@ class _LoginPageState extends State<LoginPage> {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: TextField(
-        controller: passwordController, // Burada ekledik!
         obscureText: private,
         style: AppTextStyles.subText,
         cursorColor: Appcolors.greenBackground,
@@ -293,7 +245,6 @@ class _LoginPageState extends State<LoginPage> {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: TextField(
-        controller: emailController,
         style: AppTextStyles.subText,
         cursorColor: Appcolors.greenBackground,
         decoration: InputDecoration(
