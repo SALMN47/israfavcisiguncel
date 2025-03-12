@@ -3,6 +3,7 @@ import 'package:israfavcisi/constants/appconstants.dart';
 import 'package:israfavcisi/profile/degistir.dart';
 import 'package:israfavcisi/profile/dil.dart';
 import 'package:israfavcisi/profile/duzenle.dart';
+import 'package:israfavcisi/profile/gorus.dart';
 
 class Profile1 extends StatefulWidget {
   const Profile1({super.key});
@@ -128,7 +129,14 @@ class _Profile1State extends State<Profile1> {
             ],
           ),
           list(context, 'Favorilerim', Icons.favorite_outline, () {}),
-          list(context, 'Görüşlerim', Icons.star_outline, () {}),
+          list(context, 'Görüşlerim', Icons.star_outline, () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const gorusPage(),
+              ),
+            );
+          }),
           list(context, 'Tarih', Icons.date_range_outlined, () {}),
           list(context, 'Dil', Icons.flag_outlined, () {
             Navigator.push(

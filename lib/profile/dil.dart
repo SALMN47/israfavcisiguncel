@@ -58,7 +58,10 @@ class _dilpageState extends State<dilpage> {
         iconTheme: const IconThemeData(color: Appcolors.greenBackground),
         title: Text(
           "Dil Seçimi",
-          style: AppTextStyles.headline2,
+          style: AppTextStyles.headline1!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
+              fontSize: AppSizes.myHeight(context) / 30),
         ),
       ),
       body: Padding(
