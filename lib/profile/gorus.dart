@@ -213,7 +213,7 @@ class _gorusPageState extends State<gorusPage> {
                         child: Container(
                           height: AppSizes.myHeight(context) / 7,
                           child: TextFormField(
-                            controller: feedbackController2,
+                            controller: feedbackController,
                             style: AppTextStyles.subText,
                             cursorColor: Appcolors.greenBackground,
                             decoration: InputDecoration(
