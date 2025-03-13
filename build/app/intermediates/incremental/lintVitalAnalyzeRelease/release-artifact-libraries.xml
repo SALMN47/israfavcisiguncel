@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
       name=":@@:shared_preferences_android::release"
-      jars="/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/shared_preferences_android/.transforms/6ed9d8da60bd39c9773e8a612e86c26f/transformed/out/jars/classes.jar:/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/shared_preferences_android/.transforms/6ed9d8da60bd39c9773e8a612e86c26f/transformed/out/jars/libs/R.jar"
+      jars="/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/shared_preferences_android/.transforms/4175757f6b23a451ce6bd73095596efc/transformed/out/jars/classes.jar:/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/shared_preferences_android/.transforms/4175757f6b23a451ce6bd73095596efc/transformed/out/jars/libs/R.jar"
       resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
-      folder="/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/shared_preferences_android/.transforms/6ed9d8da60bd39c9773e8a612e86c26f/transformed/out"
+      folder="/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/shared_preferences_android/.transforms/4175757f6b23a451ce6bd73095596efc/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

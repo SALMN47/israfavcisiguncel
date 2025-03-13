@@ -16,7 +16,8 @@ class AuthService {
           'email': email,
           'password': password,
         },
-      );
+      ).timeout(const Duration(seconds: 30));
+
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         if (data['status'] == 'success') {
@@ -48,7 +49,10 @@ class AuthService {
   Future<Map<String, dynamic>> registerUser({
     required String firstName,
     required String lastName,
+    required String gender,
     required String email,
+    required String phone,
+    required String address,
     required String password,
   }) async {
     try {
@@ -57,10 +61,14 @@ class AuthService {
         body: {
           'first_name': firstName,
           'last_name': lastName,
+          'gender': gender,
           'email': email,
+          'phone': phone,
+          'full_address': address,
           'password': password,
         },
-      );
+      ).timeout(const Duration(seconds: 30));
+
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         return data;
