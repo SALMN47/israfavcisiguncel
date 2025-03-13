@@ -3,6 +3,7 @@ import 'package:israfavcisi/constants/appconstants.dart';
 import 'package:israfavcisi/homescreen.dart';
 import 'package:israfavcisi/profile/profile1.dart';
 import 'package:israfavcisi/profile/profileup.dart';
+import 'package:israfavcisi/sepet.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -30,7 +31,7 @@ class _HomepageState extends State<Homepage> {
           // Add your pages here
           HomeScreen(),
           Container(color: Colors.blue), // Gifts page
-          Container(color: Colors.green), // Chat page
+          sepetPage(),
 
           ProfileScreen(), // Profile page
         ],

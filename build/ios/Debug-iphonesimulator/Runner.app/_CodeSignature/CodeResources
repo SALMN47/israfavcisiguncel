@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		RoQ66B+hTM4Vm752fRYBdvoKMms=
+		TEInhw0lyO5A8zGUiN+ilDPNy9o=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ygEvwSVdAIN0R2zz+UScZVEa5JU=
+		UTTM0WRVGjMKOJwMNF5MVV0pvZI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		bhNWQJWB5roso4gqpeMKKIQnq5M=
+		mFQ12MVmrYSmxsYWVYB61PanG2g=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		ddqJMa3ucRdXJ5sxMZ//2PWbC1A=
+		d/kxyZF1SL7R423P2wuBPcc75Gs=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -1464,6 +1464,14 @@
 		<data>
 		fo/Lvc7ubKG4awBalrHCZguRruU=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/ip2.png</key>
+		<data>
+		Nc19Lz0BhqkNpv+ePiTecfv4kgg=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/ip5.png</key>
+		<data>
+		+gWFwd9ZsyHz8GXZXrZ3gAZRIzU=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/iskenderunpark.jpg</key>
 		<data>
 		FYD0MsSHXJm6sYZxfGMq4mX05x0=
@@ -1966,7 +1974,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		r+HF1PnUkz5szjRq9BETzCQyQLg=
+		LM1GDdtPEj9dsOcl1v4GvZZW6LY=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -2185,7 +2193,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wi8bJFIOu+fNYad0rmVdPii4m9CC+z/1+BNUTveOt4I=
+			4Ui5en2yZipk89tqbhPjUnktxteIMSRf1xE3O/3JgbY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -2199,21 +2207,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FLSxkD81fDVeW/w7b43iIMdb6urCgbZCB+6YTpmn5kg=
+			aaHkauvD1YNniXeF2kK/eGvaFMLq+BGmjrjGyDNJaXw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ReQKJCVStbEsemWaqE2ntS7U8uf9tGJfv4xMU6Q6NvU=
+			KEAQTfxumjsdnVj4dyWsZ8Xp5sgfMCZm/S6345eBVVM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7GNvJM8vpFluAHERQIWM09hS4qT+2BQUXkQsbGFpyKU=
+			YfFdjJsVp9olykuCcm59vatCsWDl1hzYiQ7+ChziNDo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -4666,6 +4674,20 @@
 			E0Q0QolPljjAgJIWinuiAHz19oN0Wi3UYdyeFq96exg=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/ip2.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ClpkQLcefNMXYGuPo2XiiWVxFBTa4IGhzZ8UMrl6ytk=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/ip5.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nD8dfl2SrgeZ6yirIYRs1CN7UkTttJXUW4O//zMzJIQ=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/iskenderunpark.jpg</key>
 		<dict>
 			<key>hash2</key>
@@ -5545,7 +5567,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/H/gqp7KJ4CIW0cDMhWkNN2bSgPLUtWMvqrNZh9fRac=
+			wc7mLQ9qh7hyPN+luQ55/nofn0A+p/lK5KS7358ofs8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
