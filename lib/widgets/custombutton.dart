@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: AppSizes.myWidth(context) / 1.2, // Default genişlik: tam genişlik
+      width: AppSizes.myWidth(context) / 1.4, // Default genişlik: tam genişlik
       height: AppSizes.myHeight(context) / 18, // Default yükseklik: 50
       child: ElevatedButton(
         onPressed: () {

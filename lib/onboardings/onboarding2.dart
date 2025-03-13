@@ -7,6 +7,7 @@ class Onboarding2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Appcolors.blackBackgroundColor,
       body: Padding(
         padding: EdgeInsets.all(AppSizes.myWidth(context) / 25),

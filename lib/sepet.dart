@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
+import 'package:israfavcisi/widgets/custombutton.dart';
 
 class sepetPage extends StatefulWidget {
   const sepetPage({super.key});
@@ -396,29 +397,86 @@ class _sepetPageState extends State<sepetPage> {
               ],
             ),
             SizedBox(
-              height: AppSizes.myHeight(context) / 20,
+              height: AppSizes.myHeight(context) / 17,
             ),
-            TextField(
-              style: AppTextStyles.subText,
-              cursorColor: Appcolors.greenBackground,
-              decoration: InputDecoration(
-                hintText: "Sepetimde ara...",
-                hintStyle: AppTextStyles.subText.copyWith(color: Colors.grey),
-                filled: true,
-                fillColor: const Color(0xFF1B2B3A),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                  borderSide: const BorderSide(
-                      color: Appcolors.greenBackground, width: 2),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: AppSizes.myWidth(context) / 15,
+                    ),
+                    Text("Kuponum",
+                        style: AppTextStyles.subText!.copyWith(
+                            color: Colors.white,
+                            fontSize: AppSizes.myHeight(context) / 40,
+                            fontWeight: FontWeight.bold)),
+                  ],
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                  borderSide: const BorderSide(
-                      color: Appcolors.greenBackground, width: 2),
+                SizedBox(
+                  height: AppSizes.myHeight(context) / 150,
                 ),
-                prefixIcon:
-                    const Icon(Icons.search, color: Appcolors.greenBackground),
-              ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: AppSizes.myWidth(context) / 15,
+                    ),
+                    Container(
+                      width: AppSizes.myWidth(context) / 1.7,
+                      height: AppSizes.myHeight(context) / 15,
+                      child: TextField(
+                        style: AppTextStyles.subText,
+                        cursorColor: Appcolors.greenBackground,
+                        decoration: InputDecoration(
+                          hintText: "ex: 28943",
+                          hintStyle: AppTextStyles.subText
+                              .copyWith(color: Colors.grey),
+                          filled: true,
+                          fillColor: const Color(0xFF1B2B3A),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: const BorderSide(
+                                color: Appcolors.greenBackground, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: const BorderSide(
+                                color: Appcolors.greenBackground, width: 2),
+                          ),
+                          prefixIcon: const Icon(Icons.search,
+                              color: Appcolors.greenBackground),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: AppSizes.myWidth(context) / 20,
+                    ),
+                    SizedBox(
+                      width: AppSizes.myWidth(context) /
+                          4, // Default genişlik: tam genişlik
+                      height: AppSizes.myHeight(context) /
+                          18, // Default yükseklik: 50
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Appcolors.greenBackground,
+                          foregroundColor: Colors.black,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                        child: Text(
+                          "Uygula",
+                          style: TextStyle(
+                              fontSize: AppSizes.myHeight(context) / 60,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
