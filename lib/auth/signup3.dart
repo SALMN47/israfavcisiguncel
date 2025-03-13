@@ -1,315 +1,225 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
-
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/auth/login.dart';
-import 'package:israfavcisi/auth/signup.dart';
-import 'package:israfavcisi/auth/signup2.dart';
-import 'package:israfavcisi/auth/signup3.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
-import 'package:israfavcisi/bottomapp.dart';
+import 'package:israfavcisi/backendservices/auth_services.dart';
+import 'package:israfavcisi/homescreen.dart';
 import 'package:israfavcisi/widgets/custombutton.dart';
-import 'package:israfavcisi/widgets/custombutton2.dart';
 
 class SignUp3 extends StatefulWidget {
-  const SignUp3({super.key});
+  final String firstName;
+  final String lastName;
+  final String gender;
+  final String email;
+  final String phone;
+  final String address;
+
+  const SignUp3({
+    Key? key,
+    required this.firstName,
+    required this.lastName,
+    required this.gender,
+    required this.email,
+    required this.phone,
+    required this.address,
+  }) : super(key: key);
 
   @override
   State<SignUp3> createState() => _SignUp3State();
 }
 
 class _SignUp3State extends State<SignUp3> {
-  bool private = false;
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  bool private = true;
+  bool privateConfirm = true;
   bool isVerified = false;
+  final AuthService authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
       backgroundColor: Appcolors.greenBackground,
+      appBar: AppBar(backgroundColor: Colors.transparent),
       body: Column(
         children: [
-          text1(),
-          SizedBox(
-            height: AppSizes.myHeight(context) / 90,
+          Text(
+            "\"Bir Adım, Büyük Bir Fark Yaratır!\"",
+            textAlign: TextAlign.center,
+            style: AppTextStyles.headline2!
+                .copyWith(fontWeight: FontWeight.bold, fontSize: 25),
           ),
-          text2(),
-          SizedBox(
-            height: AppSizes.myHeight(context) / 60,
+          SizedBox(height: AppSizes.myHeight(context) / 90),
+          Text(
+            "🌍Küçük değişiklikler büyük sonuçlar doğurur. Tüketim yeteneklerini değiştir, dünyaya katkı sağla! ✨",
+            textAlign: TextAlign.center,
+            style: AppTextStyles.subText2,
           ),
+          SizedBox(height: AppSizes.myHeight(context) / 60),
           Expanded(
             child: Container(
               width: double.infinity,
               color: Appcolors.blackBackgroundColor,
               child: Card(
-                color: Appcolors.blackBackgroundColor,
-                child: Container(
-                  height: AppSizes.myHeight(context) / 1.6,
-                  width: AppSizes.myWidth(context),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: AppSizes.myHeight(context) / 10,
-                      ),
-                      text11(),
-                      field1(),
-                      text111(),
-                      field1(),
-                      SizedBox(
-                        height: AppSizes.myHeight(context) / 40,
-                      ),
-                      Row(
-                        children: [
-                          Checkbox(
-                            value: isVerified,
-                            onChanged: (bool? value) {
-                              setState(() {
-                                isVerified = value ?? false;
-                              });
-                            },
-                          ),
-                          Text(
-                              ' Gizlilik Politakasını ve  Hüküm ve Koşulları \nkabul ediyorum',
-                              style: AppTextStyles.subText),
-                        ],
-                      ),
-                      SizedBox(
-                        height: AppSizes.myHeight(context) / 40,
-                      ),
-                      Row(
-                        children: [
-                          OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                              shape: CircleBorder(),
-                              side: BorderSide(
-                                color: Appcolors.greenBackground,
-                                width: 2,
+                  margin: EdgeInsets.zero,
+                  color: Appcolors.blackBackgroundColor,
+                  child: Container(
+                    height: AppSizes.myHeight(context) / 1.6,
+                    width: AppSizes.myWidth(context),
+                    child: Column(
+                      children: [
+                        _buildLabel("Şifre"),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: TextField(
+                            controller: passwordController,
+                            obscureText: private,
+                            style: AppTextStyles.subText,
+                            cursorColor: Appcolors.greenBackground,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    private = !private;
+                                  });
+                                },
+                                icon: Icon(
+                                  private
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                  color: Appcolors.greenBackground,
+                                ),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide:
+                                    BorderSide(color: Colors.grey, width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide: BorderSide(
+                                    color: Appcolors.greenBackground, width: 2),
                               ),
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SignUp2()));
-                            },
-                            child: Icon(Icons.arrow_back,
-                                color: Appcolors.greenBackground),
                           ),
-                          CustomButton2(
-                              text: "Şimdi Kaydolun >",
+                        ),
+                        SizedBox(height: AppSizes.myHeight(context) / 40),
+                        _buildLabel("Şifre Tekrarı"),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: TextField(
+                            controller: confirmPasswordController,
+                            obscureText: privateConfirm,
+                            style: AppTextStyles.subText,
+                            cursorColor: Appcolors.greenBackground,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    privateConfirm = !privateConfirm;
+                                  });
+                                },
+                                icon: Icon(
+                                  privateConfirm
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                  color: Appcolors.greenBackground,
+                                ),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide:
+                                    BorderSide(color: Colors.grey, width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(25),
+                                borderSide: BorderSide(
+                                    color: Appcolors.greenBackground, width: 2),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: AppSizes.myHeight(context) / 40),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: isVerified,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  isVerified = value ?? false;
+                                });
+                              },
+                              activeColor: Appcolors.greenBackground,
+                            ),
+                            Expanded(
+                              child: Text(
+                                'Gizlilik Politikasını ve Hüküm ve Koşulları kabul ediyorum',
+                                style: AppTextStyles.subText,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: AppSizes.myHeight(context) / 40),
+                        Row(
+                          children: [
+                            OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                side: BorderSide(
+                                    color: Appcolors.greenBackground, width: 2),
+                              ),
                               onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Icon(Icons.arrow_back,
+                                  color: Appcolors.greenBackground),
+                            ),
+                            SizedBox(width: AppSizes.myWidth(context) / 20),
+                            CustomButton(
+                              text: "Şimdi Kaydolun >",
+                              onPressed: registerUser,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: AppSizes.myHeight(context) / 30),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Hesabınız var mı?",
+                                style: AppTextStyles.subText),
+                            GestureDetector(
+                              onTap: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Homepage()));
-                              }),
-                        ],
-                      ),
-                      SizedBox(
-                        height: AppSizes.myHeight(context) / 30,
-                      ),
-                      SizedBox(
-                        height: AppSizes.myHeight(context) / 40,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                                        builder: (context) => LoginPage()));
+                              },
+                              child: Text(
+                                " Giriş yap",
+                                style: AppTextStyles.subText!.copyWith(
+                                  color: Appcolors.greenBackground,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )),
             ),
-          )
+          ),
         ],
       ),
     );
   }
 
-  SizedBox facebookbutton(BuildContext context) {
-    return SizedBox(
-      width: AppSizes.myWidth(context) / 1.2, // Default genişlik: tam genişlik
-      height: AppSizes.myHeight(context) / 18, // Default yükseklik: 50
-      child: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF1877f2),
-            foregroundColor: Colors.black,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
-                child: Image.asset("assets/logo/f1.png"),
-              ),
-              Text(
-                "Login with Facebook",
-                style: AppTextStyles.subText,
-              )
-            ],
-          )),
-    );
-  }
-
-  SizedBox googlebutton(BuildContext context) {
-    return SizedBox(
-      width: AppSizes.myWidth(context) / 1.2, // Default genişlik: tam genişlik
-      height: AppSizes.myHeight(context) / 18, // Default yükseklik: 50
-      child: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blueGrey[900],
-            foregroundColor: Colors.black,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 8, 8),
-                child: Image.asset("assets/logo/g1.png"),
-              ),
-              Text(
-                "Login with Google",
-                style: AppTextStyles.subText,
-              )
-            ],
-          )),
-    );
-  }
-
-  Row text14(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(width: AppSizes.myWidth(context) / 20),
-        Container(
-          width: AppSizes.myWidth(context) / 5,
-          child: Divider(
-            color: Colors.grey[600],
-            thickness: 1,
-          ),
-        ),
-        SizedBox(width: AppSizes.myWidth(context) / 40),
-        Text("Try another method",
-            style: AppTextStyles.subText!.copyWith(fontSize: 15)),
-        SizedBox(width: AppSizes.myWidth(context) / 40),
-        Container(
-          width: AppSizes.myWidth(context) / 5,
-          child: Divider(
-            color: Colors.grey[600],
-            thickness: 1,
-          ),
-        ),
-        SizedBox(width: AppSizes.myWidth(context) / 20),
-      ],
-    );
-  }
-
-  Row text13() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "Hesabınız var mı ? ",
-          style: AppTextStyles.subText,
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => LoginPage()));
-          },
-          child: Text(
-            " Giriş yap",
-            style: AppTextStyles.subText!.copyWith(
-                color: Appcolors.greenBackground, fontWeight: FontWeight.bold),
-          ),
-        )
-      ],
-    );
-  }
-
-  Padding field2() {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: TextField(
-        obscureText: private,
-        style: AppTextStyles.subText,
-        cursorColor: Appcolors.greenBackground,
-        decoration: InputDecoration(
-            suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  private = !private;
-                });
-              },
-              icon: Icon(private ? Icons.visibility_off : Icons.visibility),
-            ),
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2)),
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2))),
-      ),
-    );
-  }
-
-  Padding text12() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 8, 8, 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text(" Password",
-              style:
-                  AppTextStyles.subText!.copyWith(fontWeight: FontWeight.bold)),
-        ],
-      ),
-    );
-  }
-
-  Padding field1() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: TextField(
-        obscureText: private,
-        style: AppTextStyles.subText,
-        cursorColor: Appcolors.greenBackground,
-        decoration: InputDecoration(
-            suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  private = !private;
-                });
-              },
-              icon: Icon(private ? Icons.visibility_off : Icons.visibility),
-            ),
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2)),
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2))),
-      ),
-    );
-  }
-
-  Padding text11() {
+  Widget _buildLabel(String text) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 12, 8, 0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(" Password",
+          Text(text,
               style:
                   AppTextStyles.subText!.copyWith(fontWeight: FontWeight.bold)),
         ],
@@ -317,30 +227,59 @@ class _SignUp3State extends State<SignUp3> {
     );
   }
 
-  Padding text111() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 0, 8, 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Text(" Password Confirmation",
-              style:
-                  AppTextStyles.subText!.copyWith(fontWeight: FontWeight.bold)),
-        ],
-      ),
-    );
-  }
+  void registerUser() async {
+    String password = passwordController.text.trim();
+    String confirmPassword = confirmPasswordController.text.trim();
 
-  Text text2() => Text(
-        textAlign: TextAlign.center,
-        """ 🌍Küçük değişiklikler büyük sonuçlar doğurur. Tüketim yeteneklerini değiştir, dünyaya katkı sağla! ✨ """,
-        style: AppTextStyles.subText2,
+    if (password.isEmpty || confirmPassword.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Lütfen şifre alanlarını doldurun.")),
       );
+      return;
+    }
 
-  Text text1() {
-    return Text(""" "Bir Adım, Büyük Bir Fark Yaratır!"  """,
-        textAlign: TextAlign.center,
-        style: AppTextStyles.headline2
-            .copyWith(fontWeight: FontWeight.bold, fontSize: 25));
+    if (password != confirmPassword) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Şifreler eşleşmiyor.")),
+      );
+      return;
+    }
+
+    if (!isVerified) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+            content: Text("Lütfen gizlilik politikasını kabul edin.")),
+      );
+      return;
+    }
+
+    final result = await authService.registerUser(
+      firstName: widget.firstName,
+      lastName: widget.lastName,
+      gender: widget.gender,
+      email: widget.email,
+      phone: widget.phone,
+      address: widget.address,
+      password: password,
+    );
+
+    if (result['status'] == 'success') {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(result['message']),
+          backgroundColor: Colors.green,
+          duration: const Duration(seconds: 3),
+        ),
+      );
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(result['message']),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
   }
 }

@@ -5,7 +5,7 @@
     type="LIBRARY"
     maven="io.flutter.plugins.sharedpreferences:shared_preferences_android:"
     agpVersion="8.2.1"
-    buildFolder="/Users/macintosh/Documents/GitHub/israfavcisiguncel/build/shared_preferences_android"
+    buildFolder="/Users/macintosh/Documents/GitHub/israfavcisiguncel12/build/shared_preferences_android"
     bootClassPath="/Users/macintosh/Library/Android/sdk/platforms/android-35/android.jar:/Users/macintosh/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
     javaSourceLevel="11"
     compileTarget="android-35"

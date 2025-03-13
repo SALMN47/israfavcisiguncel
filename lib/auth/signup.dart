@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/auth/login.dart';
-import 'package:israfavcisi/auth/signup.dart';
 import 'package:israfavcisi/auth/signup2.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
 import 'package:israfavcisi/widgets/custombutton.dart';
@@ -13,8 +12,11 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   String? _selectedGender;
   bool private = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,9 +49,9 @@ class _SignUpState extends State<SignUp> {
                         height: AppSizes.myHeight(context) / 10,
                       ),
                       text11(),
-                      field1(),
+                      _buildTextField(firstNameController, "Adınızı girin"),
                       text111(),
-                      field1(),
+                      _buildTextField(lastNameController, "Soyadınızı girin"),
                       text112(),
                       Padding(
                         padding: EdgeInsets.fromLTRB(
@@ -65,11 +67,14 @@ class _SignUpState extends State<SignUp> {
                               fillColor: const Color(0xFF1B2B3A),
                               filled: true,
                               enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(30)),
+                                  borderRadius: BorderRadius.circular(30),
+                                  borderSide:
+                                      BorderSide(color: Colors.grey, width: 1)),
                               focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(30),
                                   borderSide: const BorderSide(
-                                      color: Appcolors.greenBackground))),
+                                      color: Appcolors.greenBackground,
+                                      width: 2))),
                           dropdownColor: const Color(0xFF1B2B3A),
                           items: const [
                             DropdownMenuItem(
@@ -89,7 +94,6 @@ class _SignUpState extends State<SignUp> {
                             ),
                           ],
                           onChanged: (String? newValue) {
-                            // Seçilen değeri state'e aktarıyoruz.
                             setState(() {
                               _selectedGender = newValue;
                             });
@@ -102,10 +106,26 @@ class _SignUpState extends State<SignUp> {
                       CustomButton(
                           text: "İlerleyin",
                           onPressed: () {
+                            if (firstNameController.text.isEmpty ||
+                                lastNameController.text.isEmpty ||
+                                _selectedGender == null) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content:
+                                        Text("Lütfen tüm alanları doldurun.")),
+                              );
+                              return;
+                            }
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SignUp2()));
+                                    builder: (context) => SignUp2(
+                                          firstName:
+                                              firstNameController.text.trim(),
+                                          lastName:
+                                              lastNameController.text.trim(),
+                                          gender: _selectedGender!,
+                                        )));
                           }),
                       SizedBox(
                         height: AppSizes.myHeight(context) / 30,
@@ -121,6 +141,26 @@ class _SignUpState extends State<SignUp> {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget _buildTextField(TextEditingController controller, String hint) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(15, 10, 15, 5),
+      child: TextField(
+        controller: controller,
+        style: AppTextStyles.subText,
+        cursorColor: Appcolors.greenBackground,
+        decoration: InputDecoration(
+            hintText: hint,
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+                borderSide: BorderSide(color: Colors.grey, width: 1)),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(25),
+                borderSide:
+                    BorderSide(color: Appcolors.greenBackground, width: 2))),
       ),
     );
   }
@@ -272,25 +312,6 @@ class _SignUpState extends State<SignUp> {
               style:
                   AppTextStyles.subText!.copyWith(fontWeight: FontWeight.bold)),
         ],
-      ),
-    );
-  }
-
-  Padding field1() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(15, 10, 15, 5),
-      child: TextField(
-        style: AppTextStyles.subText,
-        cursorColor: Appcolors.greenBackground,
-        decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2)),
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide:
-                    BorderSide(color: Appcolors.greenBackground, width: 2))),
       ),
     );
   }

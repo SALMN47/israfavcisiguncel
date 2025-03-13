@@ -1,0 +1,2 @@
+/Users/macintosh/Documents/GitHub/israfavcisiguncel12/android/app/.cxx/RelWithDebInfo/v46y2a3r/x86_64/CMakeFiles/edit_cache.dir
+/Users/macintosh/Documents/GitHub/israfavcisiguncel12/android/app/.cxx/RelWithDebInfo/v46y2a3r/x86_64/CMakeFiles/rebuild_cache.dir
