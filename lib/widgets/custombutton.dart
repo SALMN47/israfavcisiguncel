@@ -42,7 +42,9 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: AppSizes.myWidth(context) / 23,
+              fontWeight: FontWeight.bold),
         ),
       ),
     );
