@@ -109,17 +109,12 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '1',
       'imageUrl': 'assets/bebekbakim.jpg',
-      'description': '''
-    - Premium kalite bebek bakım seti.
-    - Cilt dostu, alerji yapmayan ürünler.
-    - Bebeklerin günlük bakım ihtiyaçları için ideal.
-    - Dermatolojik olarak test edilmiştir.
-    - İçeriğinde şampuan, bebek losyonu, bebek yağı ve daha fazlası yer alır.
-    ''',
+      'description':
+          'Premium kalite bebek bakım seti, cilt dostu ve alerji yapmayan ürünlerden oluşmaktadır. Bebeklerin günlük bakım ihtiyaçları için ideal olan bu set, dermatolojik olarak test edilmiştir. İçeriğinde şampuan, bebek losyonu, bebek yağı ve daha birçok ürün yer almaktadır.',
       'shortDescription': 'Bebek Bakım Seti Premium',
       'productName': 'Bebek Bakım Seti',
       'price': 299.99,
-      'discountedPrice': 249.99, // Add discounted price
+      'discountedPrice': 249.99,
       'currency': '₺',
       'isAvailable': true,
       'rating': 4.8,
@@ -129,17 +124,12 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '2',
       'imageUrl': 'assets/gunluk.webp',
-      'description': '''
-    - Günlük kullanım için rahat ve şık ayakkabı.
-    - Yüksek kaliteli deri malzeme.
-    - Hafif ve dayanıklı taban yapısı.
-    - Farklı renk seçenekleri mevcut.
-    - Her mevsime uygun tasarım.
-    ''',
+      'description':
+          'Günlük kullanım için rahat ve şık tasarlanmış yüksek kaliteli deri ayakkabı. Hafif ve dayanıklı taban yapısı ile uzun süre kullanım imkanı sunar. Farklı renk seçenekleri mevcut olup her mevsime uygun tasarımı ile günlük şıklığınızı tamamlayacak ideal bir ayakkabıdır.',
       'shortDescription': 'Erkek Günlük Sneaker',
       'productName': 'Günlük Ayakkabı',
       'price': 599.99,
-      'discountedPrice': 499.99, // Add discounted price
+      'discountedPrice': 499.99,
       'currency': '₺',
       'isAvailable': true,
       'rating': 4.5,
@@ -149,17 +139,12 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '3',
       'imageUrl': 'assets/bebekaraba.webp',
-      'description': '''
-    - Travel sistem bebek arabası.
-    - Kolayca araç koltuğuna dönüşebilir.
-    - Yüksek güvenlik standartlarına uygun.
-    - Kompakt şekilde katlanabilir.
-    - Renk seçenekleriyle her zevke hitap eder.
-    ''',
+      'description':
+          'Travel sistem bebek arabası, kolayca araç koltuğuna dönüşebilme özelliğine sahiptir. Yüksek güvenlik standartlarına uygun üretilen bu bebek arabası, kompakt şekilde katlanabilir ve taşınabilir. Farklı renk seçenekleriyle her zevke hitap eden modern tasarımı ile bebeğinizin konforunu ve güvenliğini bir arada sunmaktadır.',
       'shortDescription': 'Travel Sistem Bebek Arabası',
       'productName': 'Bebek Arabası',
       'price': 4999.99,
-      'discountedPrice': 3999.99, // Add discounted price
+      'discountedPrice': 3999.99,
       'currency': '₺',
       'isAvailable': true,
       'rating': 4.9,
@@ -169,17 +154,12 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '4',
       'imageUrl': 'assets/tulum.jpg',
-      'description': '''
-    - Kışlık bebek tulumu.
-    - Yumuşak, sıcak tutan iç doku.
-    - Çocukların rahatça hareket edebilmesi için tasarlandı.
-    - Bebeklerin cilt dostu kumaşlardan üretilmiştir.
-    - Su geçirmez özellikte.
-    ''',
+      'description':
+          'Kışlık bebek tulumu, yumuşak ve sıcak tutan iç dokusuyla soğuk havalarda bebeğinizi sıcak tutmak için ideal bir seçimdir. Çocukların rahatça hareket edebilmesi için özel olarak tasarlanmış bu tulum, bebeklerin cilt dostu kumaşlardan üretilmiştir ve su geçirmez özelliği ile yağmurlu havalarda da kullanılabilir.',
       'shortDescription': 'Kışlık Bebek Tulumu',
       'productName': 'Bebek Tulum',
       'price': 199.99,
-      'discountedPrice': 149.99, // Add discounted price
+      'discountedPrice': 149.99,
       'currency': '₺',
       'isAvailable': true,
       'rating': 4.7,
@@ -192,13 +172,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '5',
       'imageUrl': 'assets/bebekbez.jpg',
-      'description': '''
-    - Premium bebek bezi paketi.
-    - Yüksek emiş gücü ile gece boyunca kuru tutar.
-    - Yumuşak dokusu ile bebeklerin cildine dosttur.
-    - Elastik bel bandı sayesinde rahat kullanım.
-    - Nefes alabilen kumaş yapısı.
-    ''',
+      'description':
+          'Premium bebek bezi paketi, yüksek emiş gücü ile gece boyunca bebeğinizi kuru tutmak için tasarlanmıştır. Yumuşak dokusu ile bebeklerin hassas cildine dost olan bu bezler, elastik bel bandı sayesinde rahat kullanım sağlar. Nefes alabilen kumaş yapısı ile bebeğinizin konforunu en üst düzeyde tutar.',
       'shortDescription': 'Premium Bebek Bezi Paketi',
       'productName': 'Bebek Bezi',
       'price': 189.99,
@@ -212,13 +187,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '6',
       'imageUrl': 'assets/klasik.jpg',
-      'description': '''
-    - Şık ve klasik deri ayakkabı.
-    - Yüksek kaliteli deri malzeme.
-    - Nefes alabilir iç yapı.
-    - Şık tasarımı ile her ortamda rahatlıkla kullanılabilir.
-    - Uzun ömürlü kullanım için sağlam taban.
-    ''',
+      'description':
+          'Şık ve klasik tasarıma sahip yüksek kaliteli deri ayakkabı. Nefes alabilir iç yapısı ile gün boyu konfor sunar. Şık tasarımı ile her ortamda rahatlıkla kullanılabilir ve uzun ömürlü kullanım için sağlam taban yapısına sahiptir. İş toplantılarından özel davetlere kadar her ortamda şık görünmenizi sağlar.',
       'shortDescription': 'Erkek Klasik Deri Ayakkabı',
       'productName': 'Klasik Ayakkabı',
       'price': 799.99,
@@ -232,13 +202,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '7',
       'imageUrl': 'assets/bebeksandalye.jpeg',
-      'description': '''
-    - Portatif mama sandalyesi.
-    - Kolayca katlanabilir ve taşıma çantası ile gelir.
-    - 5 noktadan sabitleme kemeri ile güvenlidir.
-    - Farklı renk seçenekleri mevcut.
-    - Ayarlanabilir yükseklik.
-    ''',
+      'description':
+          'Portatif mama sandalyesi, kolayca katlanabilir ve özel taşıma çantası ile seyahatlerde bile kullanım kolaylığı sağlar. 5 noktadan sabitleme kemeri ile bebeğinizin güvenliğini maksimum düzeyde tutar. Farklı renk seçenekleri mevcut olan bu mama sandalyesi, ayarlanabilir yükseklik özelliği ile bebeğinizin büyüme sürecine uyum sağlar.',
       'shortDescription': 'Portatif Mama Sandalyesi',
       'productName': 'Mama Sandalyesi',
       'price': 699.99,
@@ -252,13 +217,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '8',
       'imageUrl': 'assets/patik.jpeg',
-      'description': '''
-    - Yumuşak bebek patik seti.
-    - Renkli ve şık tasarım.
-    - Bebeklerin ilk adımlarında rahatlık sağlar.
-    - El yapımı, organik pamuklu kumaş.
-    - Esnek ve rahat hareket özgürlüğü.
-    ''',
+      'description':
+          'Yumuşak bebek patik seti, renkli ve şık tasarımı ile bebeğinizin ilk adımlarında rahatlık sağlar. El yapımı ve organik pamuklu kumaştan üretilen bu patikler, esnek yapısı sayesinde bebeğinize rahat hareket özgürlüğü sunar. Her mevsim kullanılabilen bu patik seti, bebeğinizin ayaklarını soğuktan korur.',
       'shortDescription': 'Bebek Patik Seti',
       'productName': 'Bebek Patik',
       'price': 89.99,
@@ -275,13 +235,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '9',
       'imageUrl': 'assets/yenidogan.jpg',
-      'description': '''
-    - Yenidoğan bebek için 10'lu set.
-    - İçeriğinde bebek tulumu, şapka, eldiven ve daha fazlası bulunur.
-    - Pamuklu kumaş, bebeklerin cildine dost.
-    - Farklı renk seçenekleri ile bebekler için şık kombinler.
-    - Rahat giyilebilir ve kolayca yıkanabilir.
-    ''',
+      'description':
+          'Yenidoğan bebek için özel tasarlanmış 10\'lu set içerisinde bebek tulumu, şapka, eldiven ve daha fazlası bulunur. Pamuklu kumaştan üretilen bu set, bebeklerin hassas cildine dosttur. Farklı renk seçenekleri ile bebekler için şık kombinler sunar ve rahat giyilebilir olup kolayca yıkanabilir özelliğe sahiptir.',
       'shortDescription': 'Hastane Çıkışı 10lu Set',
       'productName': 'Yenidoğan Set',
       'price': 399.99,
@@ -295,13 +250,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '10',
       'imageUrl': 'assets/spor.webp',
-      'description': '''
-    - Erkeğe özel spor ayakkabı.
-    - Yüksek konforlu taban yapısı.
-    - Nefes alabilir malzeme ile terlemeyi engeller.
-    - Farklı renk seçenekleri.
-    - Her türlü spor ve günlük kullanım için idealdir.
-    ''',
+      'description':
+          'Erkeğe özel tasarlanmış spor ayakkabı, yüksek konforlu taban yapısı ile uzun yürüyüşlerde bile rahatlık sağlar. Nefes alabilir malzeme ile terlemeyi engelleyen bu ayakkabı, farklı renk seçenekleri ile her tarza uyum sağlar. Her türlü spor ve günlük kullanım için ideal olan bu ayakkabı, dayanıklı yapısı ile uzun ömürlü kullanım sunar.',
       'shortDescription': 'Erkek Spor Ayakkabı',
       'productName': 'Spor Ayakkabı',
       'price': 899.99,
@@ -318,13 +268,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '11',
       'imageUrl': 'assets/bot.webp',
-      'description': '''
-    - Yüksek kalite erkek Chelsea bot.
-    - Klasik tasarım, rahat kullanım.
-    - Su geçirmez özellikte, kış aylarında mükemmel.
-    - İç kısmı sıcak tutan astar ile donatılmıştır.
-    - Uzun ömürlü ve sağlam taban.
-    ''',
+      'description':
+          'Yüksek kalite erkek Chelsea bot, klasik tasarımı ve rahat kullanımı ile günlük şıklığınızı tamamlar. Su geçirmez özellikte olan bu bot, kış aylarında mükemmel bir seçimdir. İç kısmı sıcak tutan astar ile donatılmış olan bu bot, uzun ömürlü ve sağlam taban yapısı ile dayanıklılık sunar.',
       'shortDescription': 'Erkek Chelsea Bot',
       'productName': 'Bot',
       'price': 499.99,
@@ -338,13 +283,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '12',
       'imageUrl': 'assets/bebekotokoltuk.webp',
-      'description': '''
-    - 0-13 kg bebekler için oto koltuğu.
-    - Yüksek güvenlik standartlarına uygun.
-    - 5 noktalı emniyet kemeri sistemi.
-    - Kolayca takılıp çıkarılabilir.
-    - Yumuşak, bebek dostu kumaş.
-    ''',
+      'description':
+          '0-13 kg bebekler için özel tasarlanmış oto koltuğu, yüksek güvenlik standartlarına uygun olarak üretilmiştir. 5 noktalı emniyet kemeri sistemi ile bebeğinizin güvenliğini en üst düzeyde tutar. Kolayca takılıp çıkarılabilen bu oto koltuğu, yumuşak ve bebek dostu kumaş yapısı ile bebeğinizin konforunu sağlar.',
       'shortDescription': '0-13 kg Oto Koltuğu',
       'productName': 'Oto Koltuğu',
       'price': 1299.99,
@@ -361,12 +301,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '13',
       'imageUrl': 'assets/ek1.png',
-      'description': '''
-    - Hic kullanilmamis.
-    - Yeni basim.
-    - jelatini ustunde.
-  
-    ''',
+      'description':
+          'Hiç kullanılmamış, yeni basım Calculus 1 soru bankası. Jelatini üzerinde olan bu kitap, matematik öğrencileri için mükemmel bir kaynak sunmaktadır. Tüm konuları kapsayan detaylı açıklamalar ve çözümlü örnekler içeren bu soru bankası, Calculus derslerinde başarıyı artırmak için ideal bir çalışma materyalidir.',
       'shortDescription': 'Calculus 1 soru bankasi',
       'productName': 'Calculus 1',
       'price': 320.00,
@@ -380,12 +316,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '14',
       'imageUrl': 'assets/ek2.png',
-      'description': '''
-    - Yüksek kalite tras makinesi.
-    - Minimal tasarım, rahat kullanım.
-    - Yuksek hassasiyet.
-    - Uzun ömürlü ve sağlam material.
-    ''',
+      'description':
+          'Yüksek kalite traş makinesi, minimal tasarımı ile rahat kullanım imkanı sunmaktadır. Yüksek hassasiyete sahip bu traş makinesi, cildinize zarar vermeden pürüzsüz bir traş deneyimi sağlar. Uzun ömürlü ve sağlam malzemeden üretilen bu traş makinesi, dayanıklılığı ile uzun yıllar kullanılabilir.',
       'shortDescription': 'Philips tras makinesi',
       'productName': 'Tras Makinesi',
       'price': 499.99,
@@ -399,13 +331,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '15',
       'imageUrl': 'assets/ek3.png',
-      'description': '''
-    - Az kullanilmis  Az kullanılmış ses hoparlörü
-    - minimal tasarım.
-    - yüksek ses kalitesi.
-    - Uzun batarya ömrü.
-    - Kaliteli material.
-    ''',
+      'description':
+          'Az kullanılmış ses hoparlörü, minimal tasarımı ve yüksek ses kalitesi ile müzik dinleme deneyiminizi en üst seviyeye çıkarır. Uzun batarya ömrü sayesinde kesintisiz müzik keyfi sunan bu hoparlör, kaliteli malzemesi ile dayanıklılık ve şık görünüm bir arada sunar. Bluetooth bağlantısı ile kolay kullanım imkanı sağlar.',
       'shortDescription': 'Anker Ses Hoparlörü',
       'productName': 'Ses Hoparlörü',
       'price': 749.99,
@@ -417,17 +344,13 @@ class _HomeScreenState extends State<HomeScreen> {
       'seller': 'Kardesler Elektronik',
     },
   ];
+
   final List<Map<String, dynamic>> ek2 = [
     {
       'id': '16',
       'imageUrl': 'assets/ek4.png',
-      'description': '''
-    - Az kullanilmis  outdoor ayakkabi.
-    - konforlu tasarım.
-    - Su gecirmez.
-    - Isi yalitimi.
-    - Kaliteli material.
-    ''',
+      'description':
+          'Az kullanılmış outdoor ayakkabı, konforlu tasarımı ile doğa yürüyüşlerinde rahat kullanım sağlar. Su geçirmez özelliği sayesinde yağmurlu havalarda bile ayaklarınızın kuru kalmasını sağlayan bu ayakkabı, ısı yalıtımı ile soğuk havalarda da ideal bir seçimdir. Kaliteli malzemeden üretilen bu ayakkabı, dayanıklılığı ile uzun ömürlü kullanım sunar.',
       'shortDescription': 'Salomon Outdoor Ayakkabi',
       'productName': 'Outdoor Ayakkabi',
       'price': 1199.99,
@@ -441,13 +364,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '17',
       'imageUrl': 'assets/ek5.png',
-      'description': '''
-    - Erkek Esofman.
-    - 100/100 pamuk.
-    - Hic kullanilmamis.
-    - Slim Fit kalip.
-   
-    ''',
+      'description':
+          'Erkek eşofman, %100 pamuktan üretilmiş olup hiç kullanılmamıştır. Slim fit kalıbı ile şık ve modern bir görünüm sağlayan bu eşofman, rahat yapısı ile günlük kullanım için idealdir. Yumuşak dokusu ile cildinize dost olan bu eşofman, yüksek kaliteli malzemesi ile uzun ömürlü kullanım sağlar.',
       'shortDescription': 'Under Armour Erkek Esofman',
       'productName': 'Erkek esofman',
       'price': 449.99,
@@ -461,13 +379,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '18',
       'imageUrl': 'assets/ek6.png',
-      'description': '''
-    - Erkek Eşofman.
-    - 100/100 pamuk.
-    - Hic kullanılmamis.
-    - Slim Fit kalıp.
-   
-    ''',
+      'description':
+          'Erkek eşofman, %100 pamuktan üretilmiş olup hiç kullanılmamıştır. Slim fit kalıbı ile şık ve modern bir görünüm sağlayan bu eşofman, rahat yapısı ile günlük kullanım için idealdir. Yumuşak dokusu ile cildinize dost olan bu eşofman, yüksek kaliteli malzemesi ile uzun ömürlü kullanım sağlar.',
       'shortDescription': 'Under Armour Erkek Eşofman',
       'productName': 'Erkek eşofman',
       'price': 449.99,
@@ -479,17 +392,13 @@ class _HomeScreenState extends State<HomeScreen> {
       'seller': 'Envej Tekstil',
     },
   ];
+
   final List<Map<String, dynamic>> ek3 = [
     {
       'id': '19',
       'imageUrl': 'assets/ek7.png',
-      'description': '''
-    - Erkek Esofman.
-    - 100/100 pamuk.
-    - Hic kullanilmamis.
-    - Slim Fit kalip.
-   
-    ''',
+      'description':
+          'Erkek eşofman, %100 pamuktan üretilmiş olup hiç kullanılmamıştır. Slim fit kalıbı ile şık ve modern bir görünüm sağlayan bu eşofman, rahat yapısı ile günlük kullanım için idealdir. Yumuşak dokusu ile cildinize dost olan bu eşofman, yüksek kaliteli malzemesi ile uzun ömürlü kullanım sağlar.',
       'shortDescription': 'Under Armour Erkek Eşofman',
       'productName': 'Erkek eşofman',
       'price': 449.99,
@@ -503,13 +412,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '20',
       'imageUrl': 'assets/ek8.png',
-      'description': '''
-    - Erkek Klasik Saat.
-    - Otomatik Mekanizma.
-    - Hic kullanilmamis.
-    - Celik kordon.
-   
-    ''',
+      'description':
+          'Erkek klasik saat, otomatik mekanizması ile pil değişimi gerektirmeden çalışır. Hiç kullanılmamış olan bu saat, çelik kordon yapısı ile şık ve dayanıklı bir tasarıma sahiptir. Her türlü kıyafetle rahatlıkla kombinlenebilen bu saat, su geçirmez özelliği ile günlük kullanım için idealdir.',
       'shortDescription': 'Lorus Otomatik Saat',
       'productName': 'Erkek Saat',
       'price': 2499.99,
@@ -523,13 +427,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '21',
       'imageUrl': 'assets/ek9.png',
-      'description': '''
-    - Hizli Sarj Cihazi.
-    - 30 w Hizli Sarj Imkani .
-    - Jelatini Acilmamis.
-    
-   
-    ''',
+      'description':
+          'Hızlı şarj cihazı, 30W hızlı şarj imkanı ile cihazlarınızın kısa sürede şarj olmasını sağlar. Jelatini açılmamış olan bu şarj cihazı, kompakt tasarımı ile seyahatlerde kolayca taşınabilir. Modern cihazlarla uyumlu olan bu şarj aleti, yüksek kaliteli malzemesi ile güvenli şarj imkanı sunar.',
       'shortDescription': 'Essantial Hızlı Şarj',
       'productName': 'Hızlı Şarj Cihazı',
       'price': 399.99,
@@ -541,17 +440,13 @@ class _HomeScreenState extends State<HomeScreen> {
       'seller': 'Dostlar Elektronik',
     },
   ];
+
   final List<Map<String, dynamic>> ek4 = [
     {
       'id': '22',
       'imageUrl': 'assets/ek10.png',
-      'description': '''
-    - Kablosuz Sarj Cihazi.
-    - 18 w Hizli Sarj Imkani .
-    - 0 Ayarinda.
-    
-   
-    ''',
+      'description':
+          'Kablosuz şarj cihazı, 18W hızlı şarj imkanı ile cihazlarınızı kabloya ihtiyaç duymadan şarj etmenizi sağlar. Sıfır ayarında olan bu şarj cihazı, şık tasarımı ile evinizin veya ofisinizin dekoruna uyum sağlar. Uyumlu tüm cihazlarla kullanılabilen bu şarj aleti, pratik ve modern bir çözüm sunar.',
       'shortDescription': ' Hizli kablosuz Sarj',
       'productName': 'Kablosuz Sarj Cihazi',
       'price': 599.99,
@@ -565,13 +460,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '23',
       'imageUrl': 'assets/ek11.png',
-      'description': '''
-    -  RGB SES BOMBASI.
-    - Uzun calma suresi .
-    - 0 Ayarinda.
-    
-   
-    ''',
+      'description':
+          'RGB ses bombası, etkileyici ışık efektleri ve güçlü ses kalitesi ile parti atmosferi yaratır. Uzun çalma süresi sayesinde kesintisiz müzik keyfi sunan bu hoparlör, sıfır ayarında olup hiç kullanılmamıştır. Bluetooth bağlantısı ile kolay kullanım imkanı sağlayan bu hoparlör, şık tasarımı ile bulunduğu ortama renk katar.',
       'shortDescription': 'Soundcore  RGB ses bombasi',
       'productName': 'RGB Ses Bombasi',
       'price': 599.99,
@@ -585,13 +475,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '24',
       'imageUrl': 'assets/ek12.png',
-      'description': '''
-    - Nato Kayis Saat Kordonu.
-    - Geri Donustrulurmus Material.
-    - Kullanilmamis.
-    
-   
-    ''',
+      'description':
+          'Nato kayış saat kordonu, geri dönüştürülmüş malzemeden üretilmiş olup çevre dostudur. Kullanılmamış olan bu saat kordonu, nefes alabilir yapısı ile uzun süreli kullanımlarda bile rahatsızlık vermez. Birçok saat modeli ile uyumlu olan bu kordon, klasik ve sportif tarzı bir arada sunan şık bir tasarıma sahiptir.',
       'shortDescription': ' Casio Nato Kayis Saat Kordonu',
       'productName': 'Nato Kayis',
       'price': 399.99,
@@ -603,17 +488,13 @@ class _HomeScreenState extends State<HomeScreen> {
       'seller': 'Ersa Saat',
     },
   ];
+
   final List<Map<String, dynamic>> ek5 = [
     {
       'id': '25',
       'imageUrl': 'assets/ek5.png',
-      'description': '''
-    - Erkek Esofman.
-    - 100/100 pamuk.
-    - Hic kullanilmamis.
-    - Slim Fit kalip.
-   
-    ''',
+      'description':
+          'Erkek eşofman, %100 pamuktan üretilmiş olup hiç kullanılmamıştır. Slim fit kalıbı ile şık ve modern bir görünüm sağlayan bu eşofman, rahat yapısı ile günlük kullanım için idealdir. Yumuşak dokusu ile cildinize dost olan bu eşofman, yüksek kaliteli malzemesi ile uzun ömürlü kullanım sağlar.',
       'shortDescription': 'Under Armour Erkek Esofman',
       'productName': 'Erkek esofman',
       'price': 449.99,
@@ -627,13 +508,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '26',
       'imageUrl': 'assets/ek10.png',
-      'description': '''
-    - Kablosuz Sarj Cihazi.
-    - 18 w Hizli Sarj Imkani .
-    - 0 Ayarinda.
-    
-   
-    ''',
+      'description':
+          'Kablosuz şarj cihazı, 18W hızlı şarj imkanı ile cihazlarınızı kabloya ihtiyaç duymadan şarj etmenizi sağlar. Sıfır ayarında olan bu şarj cihazı, şık tasarımı ile evinizin veya ofisinizin dekoruna uyum sağlar. Uyumlu tüm cihazlarla kullanılabilen bu şarj aleti, pratik ve modern bir çözüm sunar.',
       'shortDescription': 'Xiami  Hizli kablosuz Sarj',
       'productName': 'Kablosuz Sarj Cihazi',
       'price': 599.99,
@@ -647,13 +523,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '27',
       'imageUrl': 'assets/ek7.png',
-      'description': '''
-    - Erkek Esofman.
-    - 100/100 pamuk.
-    - Hic kullanilmamis.
-    - Slim Fit kalip.
-   
-    ''',
+      'description':
+          'Erkek eşofman, %100 pamuktan üretilmiş olup hiç kullanılmamıştır. Slim fit kalıbı ile şık ve modern bir görünüm sağlayan bu eşofman, rahat yapısı ile günlük kullanım için idealdir. Yumuşak dokusu ile cildinize dost olan bu eşofman, yüksek kaliteli malzemesi ile uzun ömürlü kullanım sağlar.',
       'shortDescription': 'Under Armour Erkek Esofman',
       'productName': 'Erkek esofman',
       'price': 449.99,
@@ -670,12 +541,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '28',
       'imageUrl': 'assets/ek2.png',
-      'description': '''
-    - Yüksek kalite tras makinesi.
-    - Minimal tasarım, rahat kullanım.
-    - Yuksek hassasiyet.
-    - Uzun ömürlü ve sağlam material.
-    ''',
+      'description':
+          'Yüksek kalite traş makinesi, minimal tasarımı ile rahat kullanım imkanı sunmaktadır. Yüksek hassasiyete sahip bu traş makinesi, cildinize zarar vermeden pürüzsüz bir traş deneyimi sağlar. Uzun ömürlü ve sağlam malzemeden üretilen bu traş makinesi, dayanıklılığı ile uzun yıllar kullanılabilir.',
       'shortDescription': 'Philips tras makinesi',
       'productName': 'Tras Makinesi',
       'price': 499.99,
@@ -689,13 +556,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '29',
       'imageUrl': 'assets/ek8.png',
-      'description': '''
-    - Erkek Klasik Saat.
-    - Otomatik Mekanizma.
-    - Hic kullanilmamis.
-    - Celik kordon.
-   
-    ''',
+      'description':
+          'Erkek klasik saat, otomatik mekanizması ile pil değişimi gerektirmeden çalışır. Hiç kullanılmamış olan bu saat, çelik kordon yapısı ile şık ve dayanıklı bir tasarıma sahiptir. Her türlü kıyafetle rahatlıkla kombinlenebilen bu saat, su geçirmez özelliği ile günlük kullanım için idealdir.',
       'shortDescription': 'Lorus Otomatik Saat',
       'productName': 'Erkek Saat',
       'price': 2499.99,
@@ -709,13 +571,8 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       'id': '30',
       'imageUrl': 'assets/ek11.png',
-      'description': '''
-    -  RGB SES BOMBASI.
-    - Uzun calma suresi .
-    - 0 Ayarinda.
-    
-   
-    ''',
+      'description':
+          'RGB ses bombası, etkileyici ışık efektleri ve güçlü ses kalitesi ile parti atmosferi yaratır. Uzun çalma süresi sayesinde kesintisiz müzik keyfi sunan bu hoparlör, sıfır ayarında olup hiç kullanılmamıştır. Bluetooth bağlantısı ile kolay kullanım imkanı sağlayan bu hoparlör, şık tasarımı ile bulunduğu ortama renk katar.',
       'shortDescription': 'Soundcore  RGB ses bombasi',
       'productName': 'RGB Ses Bombasi',
       'price': 599.99,
@@ -727,6 +584,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'seller': 'Dostlar Elektronik',
     },
   ];
+
   Widget _buildFastCategories() {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -770,7 +628,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildProductSection(
-      String title, List<Map<String, dynamic>> products) {
+    String title,
+    List<Map<String, dynamic>> products,
+  ) {
     return LayoutBuilder(
       builder: (context, constraints) {
         final screenWidth = constraints.maxWidth;
@@ -809,16 +669,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProductDetail(
-                              //product: product
-                              ),
+                          builder: (context) =>
+                              ProductDetailPage(product: product),
                         ),
                       );
                     },
                     child: Container(
                       width: AppSizes.myWidth(context) / 2,
                       margin: EdgeInsets.only(
-                          right: AppSizes.myHeight(context) / 50),
+                        right: AppSizes.myHeight(context) / 50,
+                      ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.white,
@@ -860,7 +720,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                    height: AppSizes.myHeight(context) / 100),
+                                  height: AppSizes.myHeight(context) / 100,
+                                ),
                                 Row(
                                   children: [
                                     Text(
@@ -1083,8 +944,9 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 SizedBox(height: isDesktop ? 10.0 : 5),
                 Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: isDesktop ? 16.0 : 16),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isDesktop ? 16.0 : 16,
+                  ),
                   child: Row(
                     children: [
                       Text(
@@ -1097,7 +959,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(width: 10),
                       Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 8.0, vertical: 4.0),
+                          horizontal: 8.0,
+                          vertical: 4.0,
+                        ),
                         margin: EdgeInsets.only(left: isDesktop ? 12.0 : 8),
                         color: Colors.white,
                         child: Text(
@@ -1117,27 +981,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: AppSizes.myHeight(context) / 3,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    padding:
-                        EdgeInsets.symmetric(horizontal: isDesktop ? 16.0 : 16),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isDesktop ? 16.0 : 16,
+                    ),
                     itemCount: specialProducts.length,
                     itemBuilder: (context, index) {
                       final product = specialProducts[index];
                       return GestureDetector(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) =>
-                          //         ProductDetail(product: product),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ProductDetailPage(product: product),
+                            ),
+                          );
                         },
                         child: Container(
                           width: AppSizes.myWidth(context) / 2,
                           margin: EdgeInsets.only(right: isDesktop ? 16.0 : 16),
                           decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(isDesktop ? 12.0 : 8),
+                            borderRadius: BorderRadius.circular(
+                              isDesktop ? 12.0 : 8,
+                            ),
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
@@ -1221,7 +1087,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final List<String> images = [
       "assets/banner1.jpg",
       "assets/banner2.jpg",
-      "assets/banner3.jpg"
+      "assets/banner3.jpg",
     ];
 
     return CarouselSlider(
