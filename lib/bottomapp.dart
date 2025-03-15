@@ -45,7 +45,7 @@ class _HomepageState extends State<Homepage> {
       // ),
       bottomNavigationBar: BottomAppBar(
         padding:
-            EdgeInsets.symmetric(horizontal: AppSizes.myHeight(context) / 100),
+            EdgeInsets.symmetric(horizontal: AppSizes.myHeight(context) / 40),
         height: AppSizes.myHeight(context) / 15,
         color: Color(0xFF1B2B3A),
         notchMargin: 0,
@@ -53,49 +53,63 @@ class _HomepageState extends State<Homepage> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                color: _selectedIndex == 0 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 0;
-                });
-              },
+            Row(
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.home,
+                    color: _selectedIndex == 0 ? Colors.white : Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 0;
+                    });
+                  },
+                ),
+                SizedBox(
+                  width: AppSizes.myWidth(context) / 12,
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.explore,
+                    color: _selectedIndex == 1 ? Colors.white : Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 1;
+                    });
+                  },
+                ),
+              ],
             ),
-            IconButton(
-              icon: Icon(
-                Icons.explore,
-                color: _selectedIndex == 1 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 1;
-                });
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: _selectedIndex == 2 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 2;
-                });
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.person,
-                color: _selectedIndex == 3 ? Colors.white : Colors.grey,
-              ),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 3;
-                });
-              },
+            Row(
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: _selectedIndex == 2 ? Colors.white : Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 2;
+                    });
+                  },
+                ),
+                SizedBox(
+                  width: AppSizes.myWidth(context) / 12,
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.person,
+                    color: _selectedIndex == 3 ? Colors.white : Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _selectedIndex = 3;
+                    });
+                  },
+                ),
+              ],
             ),
           ],
         ),
