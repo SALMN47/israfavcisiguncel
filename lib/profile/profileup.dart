@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:israfavcisi/adreslerim.dart';
 import 'package:israfavcisi/profile/profile1.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -260,7 +261,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
       );
     } else if (title == 'Adreslerim') {
       return InkWell(
-        onTap: () => Navigator.pushNamed(context, '/address'),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  Adreslerim(), // Replace with your actual address page widget
+            ),
+          );
+        },
         child: cardContent,
       );
     } else if (title == 'Kuponlarım') {
