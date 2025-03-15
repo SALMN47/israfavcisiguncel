@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
+import 'package:israfavcisi/profile/upload.dart';
 import 'package:israfavcisi/widgets/custombutton.dart';
 
 class duzenlePage extends StatefulWidget {
@@ -10,6 +14,49 @@ class duzenlePage extends StatefulWidget {
 }
 
 class _duzenlePageState extends State<duzenlePage> {
+  File? _image;
+  final ImagePicker _picker = ImagePicker();
+
+  Future<void> _pickImage(ImageSource source) async {
+    final pickedFile = await _picker.pickImage(source: source);
+
+    if (pickedFile != null) {
+      setState(() {
+        _image = File(pickedFile.path);
+      });
+    }
+  }
+
+  void _showPicker() {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return SafeArea(
+          child: Wrap(
+            children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.photo_library),
+                title: Text("Galeriden Seç"),
+                onTap: () {
+                  _pickImage(ImageSource.gallery);
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.camera),
+                title: Text("Kamera ile Çek"),
+                onTap: () {
+                  _pickImage(ImageSource.camera);
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   String? _selectedGender;
   @override
   Widget build(BuildContext context) {
@@ -53,7 +100,9 @@ class _duzenlePageState extends State<duzenlePage> {
                         Icons.edit_outlined,
                         color: Colors.black,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        _showPicker();
+                      },
                     ),
                   ),
                   top: AppSizes.myHeight(context) / 15,

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
+import 'package:israfavcisi/messagesPage.dart';
+import 'package:israfavcisi/notification.dart';
 import 'package:israfavcisi/productdetail.dart';
 
 class Category {
@@ -810,7 +812,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => ProductDetail(
-                              //product: product
+                              // products: product
                               ),
                         ),
                       );
@@ -937,14 +939,15 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(
             icon: const Icon(Icons.message),
             onPressed: () {
-              Navigator.pushNamed(context, '/messages');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Messagespage()));
             },
           ),
           IconButton(
             icon: const Icon(Icons.notifications),
             onPressed: () {
-              // Navigator.push(context,
-              //     MaterialPageRoute(builder: (context) => NotificationPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NotificationPage()));
             },
           ),
         ],
