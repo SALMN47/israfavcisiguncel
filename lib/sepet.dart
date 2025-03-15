@@ -151,79 +151,7 @@ class _sepetPageState extends State<sepetPage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Icon(Icons.remove,
-                            color: Appcolors.greenBackground),
-                      ),
-                      Text("3",
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child:
-                            Icon(Icons.add, color: Appcolors.greenBackground),
-                      ),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.delete))
-                    ],
-                  ),
-                  height: AppSizes.myHeight(context) / 30,
-                  width: AppSizes.myWidth(context) / 2.7,
-                ),
-                Container(
-                  height: AppSizes.myHeight(context) / 30,
-                  width: AppSizes.myWidth(context) / 2.7,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Icon(Icons.remove,
-                            color: Appcolors.greenBackground),
-                      ),
-                      Text("2",
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child:
-                            Icon(Icons.add, color: Appcolors.greenBackground),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              children: [rowadd(context), rowadd(context)],
             ),
             SizedBox(
               height: AppSizes.myHeight(context) / 40,
@@ -322,79 +250,7 @@ class _sepetPageState extends State<sepetPage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Icon(Icons.remove,
-                            color: Appcolors.greenBackground),
-                      ),
-                      Text("3",
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child:
-                            Icon(Icons.add, color: Appcolors.greenBackground),
-                      ),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.delete))
-                    ],
-                  ),
-                  height: AppSizes.myHeight(context) / 30,
-                  width: AppSizes.myWidth(context) / 2.7,
-                ),
-                Container(
-                  height: AppSizes.myHeight(context) / 30,
-                  width: AppSizes.myWidth(context) / 2.7,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Icon(Icons.remove,
-                            color: Appcolors.greenBackground),
-                      ),
-                      Text("2",
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          shape: CircleBorder(),
-                          side: BorderSide(
-                            color: Appcolors.greenBackground,
-                            width: 1,
-                          ),
-                        ),
-                        onPressed: () {},
-                        child:
-                            Icon(Icons.add, color: Appcolors.greenBackground),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              children: [rowadd(context), rowadd(context)],
             ),
             SizedBox(
               height: AppSizes.myHeight(context) / 17,
@@ -478,9 +334,102 @@ class _sepetPageState extends State<sepetPage> {
                 ),
               ],
             ),
+            SizedBox(
+              height: AppSizes.myHeight(context) / 20,
+            ),
+            Container(
+                color: Color(0xFF1B2B3A),
+                height: AppSizes.myHeight(context) / 8,
+                width: AppSizes.myWidth(context),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: AppSizes.myWidth(context) / 25,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: AppSizes.myHeight(context) / 100,
+                        ),
+                        Text(
+                          'Toplam Fiyat',
+                          style: TextStyle(
+                              fontSize: AppSizes.myHeight(context) / 50,
+                              color: Colors.grey),
+                        ),
+                        Text(
+                          '7582₺',
+                          style: TextStyle(
+                              fontSize: AppSizes.myHeight(context) / 35,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: AppSizes.myWidth(context) / 5,
+                    ),
+                    Container(
+                        width: AppSizes.myWidth(context) / 2.3,
+                        child: CustomButton(
+                            text: 'Şimdi Satın Al', onPressed: () {}))
+                  ],
+                )),
+            SizedBox(
+              height: AppSizes.myHeight(context) / 20,
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  Row rowadd(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        SizedBox(
+          width: AppSizes.myWidth(context) / 45,
+        ),
+        CircleAvatar(
+          radius: AppSizes.myHeight(context) / 45,
+          child: Center(
+            child: IconButton(
+                alignment: Alignment.center,
+                onPressed: () {},
+                icon: Icon(Icons.add),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      Appcolors.greenBackground),
+                )),
+          ),
+        ),
+        SizedBox(
+          width: AppSizes.myWidth(context) / 35,
+        ),
+        Text("2", style: TextStyle(color: Colors.white, fontSize: 20)),
+        SizedBox(
+          width: AppSizes.myWidth(context) / 35,
+        ),
+        CircleAvatar(
+          radius: AppSizes.myHeight(context) / 45,
+          child: Center(
+            child: IconButton(
+                alignment: Alignment.center,
+                onPressed: () {},
+                icon: Icon(Icons.remove),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      Appcolors.greenBackground),
+                )),
+          ),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.delete),
+          color: Colors.red,
+        ),
+      ],
     );
   }
 }

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:israfavcisi/constants/appconstants.dart';
+import 'package:israfavcisi/productdetail.dart';
 
 class Category {
   final String name;
@@ -805,12 +806,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   final product = products[index];
                   return GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => ProductDetail(product: product),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetail(
+                              //product: product
+                              ),
+                        ),
+                      );
                     },
                     child: Container(
                       width: AppSizes.myWidth(context) / 2,
